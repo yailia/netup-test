@@ -1,0 +1,35 @@
+:root {
+  --font-primary-color: #ffffff;
+  --font-secondary-color: #a6a6a6;
+
+  --header-height: 56px;
+
+  --cubic-timing: cubic-bezier(0.17, 0.67, 0.78, 1.19);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(35, 35, 35, 0.8);
+  color: var(--font-primary-color);
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--font-primary-color);
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}

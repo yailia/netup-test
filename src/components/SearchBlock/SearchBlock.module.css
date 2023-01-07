@@ -1,0 +1,42 @@
+.searchBlock {
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  grid-template-rows: 0.75fr 1fr;
+  height: calc(100vh - var(--header-height));
+  position: relative;
+  z-index: 100;
+  gap: 1rem;
+
+  transition: grid-template-rows 0s 0.3s;
+}
+
+.searchBlock.active {
+  grid-template-rows: 0.25fr 1fr;
+}
+
+.searchBlock__title {
+  margin-bottom: 3.5rem;
+  margin-top: 3.5rem;
+  font-family: 'Ubuntu';
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.searchBlock__input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.searchBlock__searchInput {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transition: top 0.3s var(--cubic-timing);
+}
+
+.searchBlock__searchInput.active {
+  top: calc(var(--header-height) + 1rem);
+}

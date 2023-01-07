@@ -1,0 +1,9 @@
+.itemsList {
+  width: 100vw;
+}
+
+.itemsList__list {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
