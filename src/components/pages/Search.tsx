@@ -24,7 +24,7 @@ export function Search() {
       ...r,
       loading: true,
     }));
-    fetch('/discover.json', { signal: controller.signal })
+    fetch('/api/discover', { signal: controller.signal })
       .then(r => r.json())
       .then(r =>
         setResource({

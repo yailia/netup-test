@@ -25,7 +25,7 @@ export function Backgrounds(props: BackgroundsProps) {
           <div
             key={idx}
             className={clsx(cls.backgrounds__img, { [cls.active]: idx === current })}
-            style={{ backgroundImage: `url(${i.url})` }}
+            style={{ backgroundImage: `url(/api/${i.url})` }}
           />
         );
       })}

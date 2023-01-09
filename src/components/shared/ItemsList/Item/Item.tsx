@@ -9,19 +9,19 @@ interface ItemProps {
 export function Item(props: ItemProps) {
   const { num_seasons, country, genres, imdb_rate, is_new, keyframe, length, min_age, poster, title, year } =
     props.data;
+    const apiUrl = '/api/';
 
   const seasonSuf = num_seasons > 1 ? 'seasons' : 'season';
   return (
     <div className={cls.item}>
       <div className={cls.item__img}>
-        <img className={cls.item__poster} src={poster} alt={title} />
-        <img className={cls.item__keyframe} src={keyframe} alt={title} />
+        <img className={cls.item__poster} src={apiUrl + poster} alt={title} />
+        <img className={cls.item__keyframe} src={apiUrl + keyframe} alt={title} />
         <button className={cls.item__moreBtn} type='button'>
           <span className={cls.item__moreBtnText}> More details</span>
         </button>
         <div className={cls.badges}>
           {is_new && <Badge color='#DE8B0F' title='New on NetUP TV' />}
-
           {imdb_rate && <Badge title='IMDB' bold={`${imdb_rate}/10`} />}
         </div>
       </div>
